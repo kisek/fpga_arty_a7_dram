@@ -1,7 +1,8 @@
 # fpga_arty_a7_dram
 
-This is DDR3 SDRAM sample project for Arty A7-35T FPGA board.
-When creating a Vivado project, please select **xc7a35ticsg324-1L** as an FPGA. Please use **Vivado 2024.1**.
+This is a DDR3 SDRAM (**MT41K128M16JT-125**) sample project for Arty A7-35T FPGA board.
+Please use **Vivado 2024.1**. 
+When creating a Vivado project, please select **xc7a35ticsg324-1L** as an FPGA. 
 
 
 ## Clocking Wizard
