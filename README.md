@@ -6,7 +6,7 @@ When creating a Vivado project, please select **xc7a35ticsg324-1L** as an FPGA.
 
 **main.c** will explain what this Verilog code tries to do.
 First, write 1 to all 32-bit words in the DRAM, then read all the words and display the sum of them in VIO.
-The final sum will be **33554432**.
+The final sum will be **33,554,432**.
 
 ## Clocking Wizard
 
