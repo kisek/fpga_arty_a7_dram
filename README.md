@@ -4,6 +4,8 @@ This is a DDR3 SDRAM (**MT41K128M16JT-125**) sample project for Arty A7-35T FPGA
 Please use **Vivado 2024.1**. 
 When creating a Vivado project, please select **xc7a35ticsg324-1L** as an FPGA. 
 
+![arty_a7](https://github.com/user-attachments/assets/4ed408a0-54ab-46a5-bcc2-693168814cb5)
+
 **main.c** will explain what this Verilog code tries to do.
 First, write 1 to all 32-bit words in the DRAM, then read all the words and display the sum of them in VIO.
 The final sum will be **33,554,432**.
