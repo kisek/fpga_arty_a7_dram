@@ -9,9 +9,24 @@ Please add **main.v** and **main.xdc** to your Vivado project.
 
 ![arty_a7](https://github.com/user-attachments/assets/4ed408a0-54ab-46a5-bcc2-693168814cb5)
 
-**main.c** will explain what this Verilog code tries to do.
+This code will explain what this Verilog code tries to do.
 First, write 1 to all 32-bit words in the DRAM, then read all the words and display the sum of them in VIO.
 The final sum will be **33,554,432**.
+
+```c
+#include <stdio.h>
+#define N  (1 << 25)
+int dram[N];
+int main() {
+    for (int addr = 0; addr < N; addr++) dram[addr] = 1; /// WRITE
+
+    int sum = 0;
+    for (int addr = 0; addr < N; addr++) sum += dram[addr]; /// READ
+
+    printf("%x %d\n", sum, sum);
+    return 0;
+}
+```
 
 ## Clocking Wizard
 
