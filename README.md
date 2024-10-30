@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-The following code is for simulation using a small data set. The final sum will be **131,071** for FPGA run.
+The following code is for simulation using a small data set. The final sum will be **131,071**.
 
 ```c
 #include <stdio.h>
