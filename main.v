@@ -3,6 +3,12 @@
 /*********************************************************************************************/
 `default_nettype none
 
+`ifdef SYNTHESIS
+`define LAST_ADDRESS     25'h1ffffff  // for FPGA run
+`else
+`define LAST_ADDRESS     25'h1ffff    // for simulation
+`endif
+
 `define DDR3_DQ__WIDTH   16
 `define DDR3_DQS_WIDTH   2
 `define DDR3_ADR_WIDTH   14
@@ -71,7 +77,7 @@ module m_main (
            end
            if (r_app_en==0 && r_app_wdf_wren==0) begin
                r_app_addr <= r_app_addr + 8;
-               r_state <= (r_app_addr[27:3]==25'h1ffffff) ? 2 : 0;
+               r_state <= (r_app_addr[27:3]==`LAST_ADDRESS) ? 2 : 0;
            end
        end
        else if (r_state==2) begin ///// INIT_FOR_READ
@@ -89,7 +95,7 @@ module m_main (
            if (app_rd_data_valid) begin
                r_app_addr <= r_app_addr + 8;
                r_sum <= r_sum + app_rd_data[31:0];
-               r_state <= (r_app_addr[27:3]==25'h1ffffff) ? 5 : 3;
+               r_state <= (r_app_addr[27:3]==`LAST_ADDRESS) ? 5 : 3;
            end
        end
     end
