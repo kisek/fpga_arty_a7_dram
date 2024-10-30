@@ -11,7 +11,7 @@ Please add **main.v** and **main.xdc** to your Vivado project.
 
 This code will explain what this Verilog code tries to do.
 First, write 1 to all 32-bit words in the DRAM, then read all the words and display the sum of them in VIO.
-The final sum will be **33,554,432**.
+The final sum will be **33,554,432** for FPGA run.
 
 ```c
 #include <stdio.h>
@@ -27,6 +27,22 @@ int main() {
     return 0;
 }
 ```
+
+The following code is for simulation using a small data set. The final sum will be **131,071** for FPGA run.
+
+```c
+#include <stdio.h>
+#define N  (1 << 17)
+int dram[N];
+int main() {
+    for (int addr = 0; addr < N; addr++) dram[addr] = 1; /// WRITE
+
+    int sum = 0;
+    for (int addr = 0; addr < N; addr++) sum += dram[addr]; /// READ
+
+    printf("%x %d\n", sum, sum);
+    return 0;
+}
 
 ## Clocking Wizard
 
