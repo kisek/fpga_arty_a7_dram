@@ -49,7 +49,7 @@ int main() {
 ## Clocking Wizard
 
 - Clocking Options, Input Clock Information : **100.000** MHz Input Frequency
-- Output Clocks, clk_out1 : **166.666667** MHz Output Freq is Requested
+- Output Clocks, clk_out1 : **166.66667** MHz Output Freq is Requested
 - Output Clocks, clk_out2 : **200** MHz Output Freq is Requested
 - Output Clocks: disable **reset**, power_down, input_clk_stopped, **locked**, clksbstopped
 
