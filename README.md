@@ -49,7 +49,7 @@ int main() {
 ## Clocking Wizard
 
 - Clocking Options, Input Clock Information : **100.000** MHz Input Frequency
-- Output Clocks, clk_out1 : **166.66667** MHz Output Freq is Requested
+- Output Clocks, clk_out1 : **160** MHz Output Freq is Requested
 - Output Clocks, clk_out2 : **200** MHz Output Freq is Requested
 - Output Clocks: disable **reset**, power_down, input_clk_stopped, **locked**, clksbstopped
 
@@ -69,7 +69,7 @@ int main() {
 - (1) MIG Output Options, AXI4 Interface: **uncheck**
 - (2) Pin Compatible FPGAs: **uncheck** 
 - (3) Memory Selection: check **DDR3 SDRAM**
-- (4) Options for Controller 0, Clock Period: **3000**
+- (4) Options for Controller 0, Clock Period: **3125 (320.0 MHz)**
 - (4) Options for Controller 0, Memory Type: **MT41K128M16XX-15E**
 - (4) Options for Controller 0, Memory Type: Create Custom Part
 - (4) Options for Controller 0, Memory Voltage: **1.35V**
@@ -77,7 +77,7 @@ int main() {
 - (4) Options for Controller 0, Data Mask: **check**
 - (4) Options for Controller 0, Number of Bank Machines: **4**
 - (4) Options for Controller 0, Ordering: **Strict**
-- (5) Memory Options C0, Input Clock Period: **6000 ps**
+- (5) Memory Options C0, Input Clock Period: **6250 ps (160 MHz)**
 - (5) Memory Options C0, Read Burst Type and Length: **Sequential**
 - (5) Memory Options C0, Output Driver Impedance Control: **RZQ/6**
 - (5) Memory Options C0, RTT: **RZQ/6**
