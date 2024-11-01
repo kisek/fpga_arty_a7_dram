@@ -41,7 +41,7 @@ module m_main (
     output wire [0:0]                    ddr3_odt
 );
 
-    wire                         sys_clk;     // input clock (166.67MHz),
+         wire                         sys_clk;     // input clock (160MHz),
     wire                         ref_clk;     // reference clock (200MHz),
     wire                         sys_rst = 0; // reset (active-high)
     clk_wiz_0 m0 (sys_clk, ref_clk, w_clk);
@@ -58,7 +58,7 @@ module m_main (
     wire                         app_rdy;
     wire                         app_wdf_rdy;
 
-    wire                         w_ui_clk; // 333.33MHz / 4 = 83.33MHz
+    wire                         w_ui_clk; // 320MHz / 4 = 80MHz
     wire                         init_calib_complete;
 
     reg [3:0] r_state = 0;
