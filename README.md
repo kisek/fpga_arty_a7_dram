@@ -69,7 +69,7 @@ int main() {
 - (1) MIG Output Options, AXI4 Interface: **uncheck**
 - (2) Pin Compatible FPGAs: **uncheck** 
 - (3) Memory Selection: check **DDR3 SDRAM**
-- (4) Options for Controller 0, Clock Period: **3125 (320.0 MHz)**
+- (4) Options for Controller 0, Clock Period: **3125 (320.0 MHz)**  _Note that one-fourth of this 320MHz clock is used as the operating frequency of w_ui_clk, which is 80MHz._
 - (4) Options for Controller 0, Memory Type: **MT41K128M16XX-15E**
 - (4) Options for Controller 0, Memory Type: Create Custom Part
 - (4) Options for Controller 0, Memory Voltage: **1.35V**
